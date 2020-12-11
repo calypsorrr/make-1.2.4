@@ -10,7 +10,7 @@ __author__ = "Bo Claes"
 __email__ = "bo.claes@student.kdg.be"
 __status__ = "Development"
 
-
+# This will scan all the ports for which ip-adress you put in
 def main_poort():
 
     startTime = time.time()
