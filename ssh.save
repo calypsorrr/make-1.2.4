@@ -4,5 +4,18 @@ sudo apt-get upgrade
 sudo apt-get install openssh-server
 sudo systemctl enable ssh
 sudo systemctl start ssh
-sudo systemctl status ssh
+sudo apt-get install apache2
+sudo apt install mariadb-server mariadb-client
+sudo mysql_secure_installation
+sudo mysql -u root -p
+sudo apt -y install wget php php-cgi php-mysqli php-pear php-mbstring php-gettext libapache2-mod-php php-common php-phpseclib php-mysql
+wget https://files.phpmyadmin.net/phpMyAdmin/4.9.7/phpMyAdmin-4.9.7-all-languages.tar.gz
+tar xvf phpMyAdmin-4.9.7-all-languages.tar.gz
+sudo mv phpMyAdmin-*/ /usr/share/phpmyadmin
+sudo mkdir -p /var/lib/phpmyadmin
+sudo chown -R www-data:www-data /var/lib/phpmyadmin
+sudo mkdir /etc/phpmyadmin/
+sudo cp /usr/share/phpmyadmin/config.inc.php
+sudo nano /etc/apache2/conf-enabled/phpmyadmin.conf
+sudo reboot
 exit
